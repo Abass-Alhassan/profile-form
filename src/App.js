@@ -1,11 +1,10 @@
 import React from 'react'
 import ProfileForm from './components/ProfileForm'
 import ProfileCard from './components/ProfileCard'
-import {useState} from 'react'
 import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
- const [profiles, setProfiles]=useLocalStorage("profiles", [])
+ const [profiles, setProfiles]=useLocalStorage("profiles",[])
   const updateProfiles = (profile)=>{
     let arr =profiles;
     arr.push(profile);
@@ -25,6 +24,6 @@ function App() {
     </div>
     </div>
   )
-}
+};
 
 export default App
